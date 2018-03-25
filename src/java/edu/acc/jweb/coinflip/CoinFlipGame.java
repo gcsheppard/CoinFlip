@@ -1,16 +1,14 @@
 package edu.acc.jweb.coinflip;
 
 public class CoinFlipGame {
-    int wins;
-    int losses;
+    public int wins;
+    public int losses;
+    public String lastGuess;
+    public String lastFlip;
+    public String lastResult;
     
     CoinFlipGame() {
         newGame();
-    }
-    
-    enum Flip
-    {
-        HEADS, TAILS;
     }
     
     public void newGame() {
@@ -18,14 +16,25 @@ public class CoinFlipGame {
         this.losses = 0;
     }
     
-    public boolean playGame (int guess) {
-        int result =  (int) ((int) 2 * Math.random());
-        if (result == guess) {
+    public void playGame (String guess) {
+        //double index =  0.9;
+        double index =  Math.random();
+        String flip;
+        if (index < 0.5) {
+            flip = "HEADS";
+        }
+        else {
+            flip = "TAILS";
+        }
+        this.lastGuess = guess;
+        this.lastFlip = flip;
+        if (flip.equals(guess)) {
             this.wins++;
+            this.lastResult = "win";
         }
         else {
             this.losses++;
+            this.lastResult = "lose";
         }
-        return (result == guess);
     }
 }
