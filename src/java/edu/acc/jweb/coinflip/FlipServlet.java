@@ -25,11 +25,8 @@ public class FlipServlet extends HttpServlet {
         if (cfGame == null) {
             cfGame = new CoinFlipGame();
             session.setAttribute("cfGame", cfGame);
-            //session.setAttribute("getGame", "created new game");
         }
-        else {
-            //session.setAttribute("getGame", "did not create new game");
-        }
+        
         cfGame.playGame(guess);
         request.setAttribute("wins", cfGame.wins);
         request.setAttribute("losses", cfGame.losses);

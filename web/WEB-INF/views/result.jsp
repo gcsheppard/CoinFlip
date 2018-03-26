@@ -7,10 +7,6 @@
         <link rel="stylesheet" href="/CoinFlip/styles/styles.css">
     </head>
     <body>
-        
-        
-        
-        
         <div>You guessed: ${lastGuess}</div>
         <div>The coin came up: ${lastFlip}</div>
         <div>You ${lastResult}!</div><br>
