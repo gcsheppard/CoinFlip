@@ -9,25 +9,24 @@
     <body>
         
         
-        <div>list game results here</div><br>
-        
-        <div>wins: ${wins}</div><br>
-        <div>losses: ${losses}</div><br>
-        <div>lastGuess: ${lastGuess}</div><br>
-        <div>lastFlip: ${lastFlip}</div><br>
-        <div>lastResult: ${lastResult}</div><br>
         
         
+        <div>You guessed: ${lastGuess}</div>
+        <div>The coin came up: ${lastFlip}</div>
+        <div>You ${lastResult}!</div><br>
         
-
-        Click the button of your choice to guess the next coin flip.<br><br>
+        <div>Your results so far:</div>
+        <div>Wins: ${wins}</div>
+        <div>Losses: ${losses}</div><br>
+        
+        <h2>Try again?</h2>
         
         <form action="flip" method="post">
-            <input type="submit" name="guess" value="HEADS" /><br><br>
-            <input type="submit" name="guess" value="TAILS" />
-        </form> 
+            <div><input type="submit" name="guess" value="HEADS" /></div><br>
+            <div><input type="submit" name="guess" value="TAILS" /></div>
+        </form>  
         
-        <br><div><a href="/CoinFlip/quit">Quit</a></div><br>
+        <br><br><br><div><a href="/CoinFlip/quit">Quit game</a></div><br>
         
     </body>
 </html>

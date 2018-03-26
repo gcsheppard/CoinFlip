@@ -2,8 +2,14 @@ body {
     background-color: powderblue;
 }
 p {
-    text-indent: 50px; color: red; font-size:30px;
+    text-indent: 100px; color: red; font-size:50px;
 }
 div {
-    text-indent: 50px;
+    text-indent: 100px;
+}
+h2 {
+    text-indent: 100px;
+}
+h1 {
+    text-indent: 100px;
 }

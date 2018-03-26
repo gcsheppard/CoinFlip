@@ -5,12 +5,13 @@
         <link rel="stylesheet" href="/CoinFlip/styles/styles.css">
     </head>
     <body>
-        Welcome to the CoinFlip game!
-        Click the button of your choice to guess the next coin flip.<br><br>
+        <h1>Welcome to the CoinFlip game!</h1>
+        <h2>Click the button of your choice</h2> 
+        <h2>to guess the next coin flip.</h2>
         
         <form action="flip" method="post">
-            <input type="submit" name="guess" value="HEADS" /><br><br>
-            <input type="submit" name="guess" value="TAILS" />
+            <div><input type="submit" name="guess" value="HEADS" /></div><br>
+            <div><input type="submit" name="guess" value="TAILS" /></div>
         </form> 
         
 </html>
