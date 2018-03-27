@@ -3,7 +3,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <head>
         <link rel="stylesheet" href="/CoinFlip/styles/styles.css">
     </head>
     <body>
@@ -13,9 +12,10 @@
         
         <div>Your results so far:</div>
         <div>Wins: ${wins}</div>
-        <div>Losses: ${losses}</div><br>
+        <div>Losses: ${losses}</div>
+        <div>Score: ${score}</div><br>
         
-        <h2>Try again?</h2>
+        <h2>Try again!</h2>
         
         <form action="flip" method="post">
             <div><input type="submit" name="guess" value="HEADS" /></div><br>

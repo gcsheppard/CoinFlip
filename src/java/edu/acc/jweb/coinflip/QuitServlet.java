@@ -14,7 +14,9 @@ public class QuitServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession(true);
+        CoinFlipGame cfGame = (CoinFlipGame) session.getAttribute("cfGame");
+        request.setAttribute("score", cfGame.score);
         session.invalidate();
-        getServletContext().getRequestDispatcher("/WEB-INF/views/hello.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher("/WEB-INF/views/quit.jsp").forward(request, response);
     }  
 }

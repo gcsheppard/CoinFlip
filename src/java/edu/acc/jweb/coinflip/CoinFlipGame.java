@@ -3,6 +3,7 @@ package edu.acc.jweb.coinflip;
 public class CoinFlipGame {
     public int wins;
     public int losses;
+    public String score;
     public String lastGuess;
     public String lastFlip;
     public String lastResult;
@@ -36,5 +37,9 @@ public class CoinFlipGame {
             this.losses++;
             this.lastResult = "lose";
         }
+        index = ((double) this.wins/(this.wins + this.losses));
+        index = index * 100;
+        int ix = (int) index;
+        score = String.valueOf(ix) + "%";
     }
 }

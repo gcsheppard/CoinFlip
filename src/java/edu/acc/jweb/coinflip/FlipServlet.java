@@ -33,6 +33,7 @@ public class FlipServlet extends HttpServlet {
         request.setAttribute("lastGuess", cfGame.lastGuess);
         request.setAttribute("lastFlip", cfGame.lastFlip);
         request.setAttribute("lastResult", cfGame.lastResult);
+        request.setAttribute("score", cfGame.score);
         getServletContext().getRequestDispatcher("/WEB-INF/views/result.jsp").forward(request, response);
     }
 
